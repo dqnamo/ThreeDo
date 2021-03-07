@@ -1,0 +1,716 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E804027A25F56172005DBDCC /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E804027925F56172005DBDCC /* Tests_iOS.swift */; };
+		E804028525F56172005DBDCC /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E804028425F56172005DBDCC /* Tests_macOS.swift */; };
+		E804028725F56172005DBDCC /* ThreeDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E804025B25F56170005DBDCC /* ThreeDo.xcdatamodeld */; };
+		E804028825F56172005DBDCC /* ThreeDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E804025B25F56170005DBDCC /* ThreeDo.xcdatamodeld */; };
+		E804028925F56172005DBDCC /* ThreeDoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E804025D25F56170005DBDCC /* ThreeDoApp.swift */; };
+		E804028A25F56172005DBDCC /* ThreeDoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E804025D25F56170005DBDCC /* ThreeDoApp.swift */; };
+		E804028B25F56172005DBDCC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E804025E25F56170005DBDCC /* ContentView.swift */; };
+		E804028C25F56172005DBDCC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E804025E25F56170005DBDCC /* ContentView.swift */; };
+		E804028D25F56172005DBDCC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E804025F25F56170005DBDCC /* Persistence.swift */; };
+		E804028E25F56172005DBDCC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E804025F25F56170005DBDCC /* Persistence.swift */; };
+		E804028F25F56172005DBDCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E804026025F56172005DBDCC /* Assets.xcassets */; };
+		E804029025F56172005DBDCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E804026025F56172005DBDCC /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E804027625F56172005DBDCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E804025625F56170005DBDCC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E804026425F56172005DBDCC;
+			remoteInfo = "ThreeDo (iOS)";
+		};
+		E804028125F56172005DBDCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E804025625F56170005DBDCC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E804026C25F56172005DBDCC;
+			remoteInfo = "ThreeDo (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E804025C25F56170005DBDCC /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
+		E804025D25F56170005DBDCC /* ThreeDoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDoApp.swift; sourceTree = "<group>"; };
+		E804025E25F56170005DBDCC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E804025F25F56170005DBDCC /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		E804026025F56172005DBDCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E804026525F56172005DBDCC /* ThreeDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreeDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E804026825F56172005DBDCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E804026D25F56172005DBDCC /* ThreeDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreeDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E804026F25F56172005DBDCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E804027025F56172005DBDCC /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		E804027525F56172005DBDCC /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E804027925F56172005DBDCC /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		E804027B25F56172005DBDCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E804028025F56172005DBDCC /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E804028425F56172005DBDCC /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		E804028625F56172005DBDCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E804026225F56172005DBDCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E804026A25F56172005DBDCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E804027225F56172005DBDCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E804027D25F56172005DBDCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E804025525F56170005DBDCC = {
+			isa = PBXGroup;
+			children = (
+				E804025A25F56170005DBDCC /* Shared */,
+				E804026725F56172005DBDCC /* iOS */,
+				E804026E25F56172005DBDCC /* macOS */,
+				E804027825F56172005DBDCC /* Tests iOS */,
+				E804028325F56172005DBDCC /* Tests macOS */,
+				E804026625F56172005DBDCC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E804025A25F56170005DBDCC /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E804025D25F56170005DBDCC /* ThreeDoApp.swift */,
+				E804025E25F56170005DBDCC /* ContentView.swift */,
+				E804025F25F56170005DBDCC /* Persistence.swift */,
+				E804026025F56172005DBDCC /* Assets.xcassets */,
+				E804025B25F56170005DBDCC /* ThreeDo.xcdatamodeld */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		E804026625F56172005DBDCC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E804026525F56172005DBDCC /* ThreeDo.app */,
+				E804026D25F56172005DBDCC /* ThreeDo.app */,
+				E804027525F56172005DBDCC /* Tests iOS.xctest */,
+				E804028025F56172005DBDCC /* Tests macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E804026725F56172005DBDCC /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				E804026825F56172005DBDCC /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		E804026E25F56172005DBDCC /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				E804026F25F56172005DBDCC /* Info.plist */,
+				E804027025F56172005DBDCC /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		E804027825F56172005DBDCC /* Tests iOS */ = {
+			isa = PBXGroup;
+			children = (
+				E804027925F56172005DBDCC /* Tests_iOS.swift */,
+				E804027B25F56172005DBDCC /* Info.plist */,
+			);
+			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		E804028325F56172005DBDCC /* Tests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				E804028425F56172005DBDCC /* Tests_macOS.swift */,
+				E804028625F56172005DBDCC /* Info.plist */,
+			);
+			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E804026425F56172005DBDCC /* ThreeDo (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E804029325F56172005DBDCC /* Build configuration list for PBXNativeTarget "ThreeDo (iOS)" */;
+			buildPhases = (
+				E804026125F56172005DBDCC /* Sources */,
+				E804026225F56172005DBDCC /* Frameworks */,
+				E804026325F56172005DBDCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ThreeDo (iOS)";
+			productName = "ThreeDo (iOS)";
+			productReference = E804026525F56172005DBDCC /* ThreeDo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E804026C25F56172005DBDCC /* ThreeDo (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E804029625F56172005DBDCC /* Build configuration list for PBXNativeTarget "ThreeDo (macOS)" */;
+			buildPhases = (
+				E804026925F56172005DBDCC /* Sources */,
+				E804026A25F56172005DBDCC /* Frameworks */,
+				E804026B25F56172005DBDCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ThreeDo (macOS)";
+			productName = "ThreeDo (macOS)";
+			productReference = E804026D25F56172005DBDCC /* ThreeDo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E804027425F56172005DBDCC /* Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E804029925F56172005DBDCC /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildPhases = (
+				E804027125F56172005DBDCC /* Sources */,
+				E804027225F56172005DBDCC /* Frameworks */,
+				E804027325F56172005DBDCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E804027725F56172005DBDCC /* PBXTargetDependency */,
+			);
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = E804027525F56172005DBDCC /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		E804027F25F56172005DBDCC /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E804029C25F56172005DBDCC /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				E804027C25F56172005DBDCC /* Sources */,
+				E804027D25F56172005DBDCC /* Frameworks */,
+				E804027E25F56172005DBDCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E804028225F56172005DBDCC /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = E804028025F56172005DBDCC /* Tests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E804025625F56170005DBDCC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					E804026425F56172005DBDCC = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					E804026C25F56172005DBDCC = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					E804027425F56172005DBDCC = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = E804026425F56172005DBDCC;
+					};
+					E804027F25F56172005DBDCC = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = E804026C25F56172005DBDCC;
+					};
+				};
+			};
+			buildConfigurationList = E804025925F56170005DBDCC /* Build configuration list for PBXProject "ThreeDo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E804025525F56170005DBDCC;
+			productRefGroup = E804026625F56172005DBDCC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E804026425F56172005DBDCC /* ThreeDo (iOS) */,
+				E804026C25F56172005DBDCC /* ThreeDo (macOS) */,
+				E804027425F56172005DBDCC /* Tests iOS */,
+				E804027F25F56172005DBDCC /* Tests macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E804026325F56172005DBDCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E804028F25F56172005DBDCC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E804026B25F56172005DBDCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E804029025F56172005DBDCC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E804027325F56172005DBDCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E804027E25F56172005DBDCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E804026125F56172005DBDCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E804028725F56172005DBDCC /* ThreeDo.xcdatamodeld in Sources */,
+				E804028D25F56172005DBDCC /* Persistence.swift in Sources */,
+				E804028925F56172005DBDCC /* ThreeDoApp.swift in Sources */,
+				E804028B25F56172005DBDCC /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E804026925F56172005DBDCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E804028825F56172005DBDCC /* ThreeDo.xcdatamodeld in Sources */,
+				E804028E25F56172005DBDCC /* Persistence.swift in Sources */,
+				E804028A25F56172005DBDCC /* ThreeDoApp.swift in Sources */,
+				E804028C25F56172005DBDCC /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E804027125F56172005DBDCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E804027A25F56172005DBDCC /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E804027C25F56172005DBDCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E804028525F56172005DBDCC /* Tests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E804027725F56172005DBDCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E804026425F56172005DBDCC /* ThreeDo (iOS) */;
+			targetProxy = E804027625F56172005DBDCC /* PBXContainerItemProxy */;
+		};
+		E804028225F56172005DBDCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E804026C25F56172005DBDCC /* ThreeDo (macOS) */;
+			targetProxy = E804028125F56172005DBDCC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E804029125F56172005DBDCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E804029225F56172005DBDCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		E804029425F56172005DBDCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = JP.ThreeDo;
+				PRODUCT_NAME = ThreeDo;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E804029525F56172005DBDCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = JP.ThreeDo;
+				PRODUCT_NAME = ThreeDo;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E804029725F56172005DBDCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = JP.ThreeDo;
+				PRODUCT_NAME = ThreeDo;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E804029825F56172005DBDCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = JP.ThreeDo;
+				PRODUCT_NAME = ThreeDo;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		E804029A25F56172005DBDCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "JP.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "ThreeDo (iOS)";
+			};
+			name = Debug;
+		};
+		E804029B25F56172005DBDCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "JP.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "ThreeDo (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E804029D25F56172005DBDCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "JP.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "ThreeDo (macOS)";
+			};
+			name = Debug;
+		};
+		E804029E25F56172005DBDCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "JP.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "ThreeDo (macOS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E804025925F56170005DBDCC /* Build configuration list for PBXProject "ThreeDo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E804029125F56172005DBDCC /* Debug */,
+				E804029225F56172005DBDCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E804029325F56172005DBDCC /* Build configuration list for PBXNativeTarget "ThreeDo (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E804029425F56172005DBDCC /* Debug */,
+				E804029525F56172005DBDCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E804029625F56172005DBDCC /* Build configuration list for PBXNativeTarget "ThreeDo (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E804029725F56172005DBDCC /* Debug */,
+				E804029825F56172005DBDCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E804029925F56172005DBDCC /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E804029A25F56172005DBDCC /* Debug */,
+				E804029B25F56172005DBDCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E804029C25F56172005DBDCC /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E804029D25F56172005DBDCC /* Debug */,
+				E804029E25F56172005DBDCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E804025B25F56170005DBDCC /* ThreeDo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E804025C25F56170005DBDCC /* Shared.xcdatamodel */,
+			);
+			currentVersion = E804025C25F56170005DBDCC /* Shared.xcdatamodel */;
+			path = ThreeDo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E804025625F56170005DBDCC /* Project object */;
+}
