@@ -22,9 +22,11 @@ struct ContentView: View {
                     HStack {
                         Text("\(task.name)")
                     }
+                    .padding()
                 }
                 .onDelete(perform: deleteTodo)
             }
+            .listStyle(InsetGroupedListStyle())
 //            List(tasks) { task in
 //                Text("\(task.name)")
 //            }

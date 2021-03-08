@@ -37,6 +37,7 @@ struct AddTodoView: View {
                             self.errorShowing = true
                             self.errorTitle = "Oops."
                             self.errorMessage = "Looks like you forgot describe your goal!"
+                            viewContext.delete(task)
                             return
                         }
                         self.presentationMode.wrappedValue.dismiss()
@@ -53,10 +54,10 @@ struct AddTodoView: View {
                     }, label: {
                         Image(systemName: "xmark")
                     }))
-            .alert(isPresented: $errorShowing, content: {
-                Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("OK")))
-            })
         }
+        .alert(isPresented: $errorShowing, content: {
+            Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("OK")))
+        })
     }
 }
 
