@@ -9,69 +9,51 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+    @State private var showingAddTodoView: Bool = false
     @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(entity: Task.entity(), sortDescriptors: [])
 
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
+    var tasks: FetchedResults<Task>
 
     var body: some View {
-        List {
-            ForEach(items) { item in
-                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+        NavigationView{
+            List{
+                ForEach(tasks) { task in
+                    HStack {
+                        Text("\(task.name)")
+                    }
+                }
+                .onDelete(perform: deleteTodo)
             }
-            .onDelete(perform: deleteItems)
-        }
-        .toolbar {
-            #if os(iOS)
-            EditButton()
-            #endif
-
-            Button(action: addItem) {
-                Label("Add Item", systemImage: "plus")
-            }
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
+//            List(tasks) { task in
+//                Text("\(task.name)")
+//            }
+                .navigationBarTitle("Today's Tasks")
+                .navigationBarItems(trailing:
+                    Button(action: {
+                        self.showingAddTodoView.toggle()
+                    }, label: {
+                        Image(systemName: "plus")
+                    }))
+            .sheet(isPresented: $showingAddTodoView, content: {
+                AddTodoView()
+            })
         }
     }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
+    
+    private func deleteTodo(at offsets: IndexSet){
+        for index in offsets {
+            let task = tasks[index]
+            viewContext.delete(task)
+            
+            do{
                 try viewContext.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+                print(error)
             }
         }
     }
 }
-
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

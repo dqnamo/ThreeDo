@@ -19,6 +19,10 @@
 		E804028E25F56172005DBDCC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E804025F25F56170005DBDCC /* Persistence.swift */; };
 		E804028F25F56172005DBDCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E804026025F56172005DBDCC /* Assets.xcassets */; };
 		E804029025F56172005DBDCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E804026025F56172005DBDCC /* Assets.xcassets */; };
+		E82F292425F60E8D0078B67C /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F292225F60E8D0078B67C /* Task+CoreDataClass.swift */; };
+		E82F292525F60E8D0078B67C /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F292325F60E8D0078B67C /* Task+CoreDataProperties.swift */; };
+		E8DB971B25F6025D00CE41F0 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DB971A25F6025D00CE41F0 /* AddTodoView.swift */; };
+		E8DB971C25F6025D00CE41F0 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DB971A25F6025D00CE41F0 /* AddTodoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +44,7 @@
 
 /* Begin PBXFileReference section */
 		E804025C25F56170005DBDCC /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
-		E804025D25F56170005DBDCC /* ThreeDoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDoApp.swift; sourceTree = "<group>"; };
+		E804025D25F56170005DBDCC /* ThreeDoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDoApp.swift; sourceTree = "<group>"; tabWidth = 4; };
 		E804025E25F56170005DBDCC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E804025F25F56170005DBDCC /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		E804026025F56172005DBDCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +59,9 @@
 		E804028025F56172005DBDCC /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E804028425F56172005DBDCC /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		E804028625F56172005DBDCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E82F292225F60E8D0078B67C /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E82F292325F60E8D0078B67C /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E8DB971A25F6025D00CE41F0 /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +99,8 @@
 		E804025525F56170005DBDCC = {
 			isa = PBXGroup;
 			children = (
+				E82F292225F60E8D0078B67C /* Task+CoreDataClass.swift */,
+				E82F292325F60E8D0078B67C /* Task+CoreDataProperties.swift */,
 				E804025A25F56170005DBDCC /* Shared */,
 				E804026725F56172005DBDCC /* iOS */,
 				E804026E25F56172005DBDCC /* macOS */,
@@ -109,6 +118,7 @@
 				E804025F25F56170005DBDCC /* Persistence.swift */,
 				E804026025F56172005DBDCC /* Assets.xcassets */,
 				E804025B25F56170005DBDCC /* ThreeDo.xcdatamodeld */,
+				E8DB971A25F6025D00CE41F0 /* AddTodoView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -320,6 +330,9 @@
 				E804028D25F56172005DBDCC /* Persistence.swift in Sources */,
 				E804028925F56172005DBDCC /* ThreeDoApp.swift in Sources */,
 				E804028B25F56172005DBDCC /* ContentView.swift in Sources */,
+				E82F292525F60E8D0078B67C /* Task+CoreDataProperties.swift in Sources */,
+				E82F292425F60E8D0078B67C /* Task+CoreDataClass.swift in Sources */,
+				E8DB971B25F6025D00CE41F0 /* AddTodoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +344,7 @@
 				E804028E25F56172005DBDCC /* Persistence.swift in Sources */,
 				E804028A25F56172005DBDCC /* ThreeDoApp.swift in Sources */,
 				E804028C25F56172005DBDCC /* ContentView.swift in Sources */,
+				E8DB971C25F6025D00CE41F0 /* AddTodoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +497,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 252B4ZGSZY;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -504,6 +519,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 252B4ZGSZY;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
