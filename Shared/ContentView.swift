@@ -32,10 +32,22 @@ struct ContentView: View {
                 VStack{
                     List{
                         ForEach(tasks) { task in
-                            HStack {
-                                Text("\(task.name)")
-                            }
-                            .padding()
+                            Button(action: {
+                                if task.completed{
+                                    uncompleteTodo(t: task)
+                                }else{
+                                    completeTodo(t: task)
+                                }
+                            }){
+                                HStack {
+                                    Text("\(task.name)")
+                                        .strikethrough(task.completed)
+                                    if task.completed{
+                                        Image(systemName: "checkmark.square.fill")
+                                    }
+                                }
+                                .padding()
+                            }.buttonStyle(PlainButtonStyle())
                         }
                         .onDelete(perform: deleteTodo)
                         if tasks.count < 3{
@@ -43,7 +55,7 @@ struct ContentView: View {
                                 Button(action: {
                                     self.showingAddTodoView.toggle()
                                 }, label: {
-                                    Text("New Goal")
+                                    Text("🚀 Add a goal")
                                         .foregroundColor(.white)
                                 })
                             }
@@ -52,9 +64,6 @@ struct ContentView: View {
                         }
                     }
                     .listStyle(InsetGroupedListStyle())
-                    .onAppear {
-                        UITableView.appearance().isScrollEnabled = false
-                    }
                 }
                 
             }
@@ -84,6 +93,24 @@ struct ContentView: View {
             } catch {
                 print(error)
             }
+        }
+    }
+    
+    private func completeTodo(t: Task){
+        t.completed = true
+        do {
+            try viewContext.save()
+        } catch {
+            print("error")
+        }
+    }
+    
+    private func uncompleteTodo(t: Task){
+        t.completed = false
+        do {
+            try viewContext.save()
+        } catch {
+            print("error")
         }
     }
 }
