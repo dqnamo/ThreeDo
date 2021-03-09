@@ -22,6 +22,7 @@ struct AddTodoView: View {
             VStack{
                 Form{
                     TextField("New goal", text: $name)
+                        .padding()
                     Button(action: {
                         let task = Task(context: viewContext)
                         if self.name != "" {
@@ -42,9 +43,12 @@ struct AddTodoView: View {
                         }
                         self.presentationMode.wrappedValue.dismiss()
                     }, label: {
-                        Text("Save goal")
+                        Text("Add Goal")
                             .background(Color("ColorBase"))
+                            .foregroundColor(.white)
                     })
+                    .padding()
+                    .listRowBackground(Color.blue)
                 }
             }
                 .navigationBarTitle("Add Todo")

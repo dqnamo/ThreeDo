@@ -18,11 +18,16 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             VStack{
-                Spacer(minLength: 40)
+                Spacer(minLength: 30)
                 VStack{
                     Text("🎯 Today's Goals")
                         .fontWeight(.bold)
                         .font(.system(size: 30))
+                    Text(self.todayDate())
+                        .font(.system(size: 15))
+                        .foregroundColor(Color(UIColor.secondaryLabel))
+                        .padding(.top, 5)
+                        .padding(.bottom, 10)
                 }
                 VStack{
                     List{
@@ -38,7 +43,7 @@ struct ContentView: View {
                                 Button(action: {
                                     self.showingAddTodoView.toggle()
                                 }, label: {
-                                    Text("Add Goal")
+                                    Text("New Goal")
                                         .foregroundColor(.white)
                                 })
                             }
@@ -47,6 +52,9 @@ struct ContentView: View {
                         }
                     }
                     .listStyle(InsetGroupedListStyle())
+                    .onAppear {
+                        UITableView.appearance().isScrollEnabled = false
+                    }
                 }
                 
             }
@@ -57,6 +65,13 @@ struct ContentView: View {
             })
 
         }
+    }
+    
+    private func todayDate() -> String{
+        let today = Date()
+        let formatter3 = DateFormatter()
+        formatter3.dateFormat = "E, d MMM y"
+        return formatter3.string(from: today)
     }
     
     private func deleteTodo(at offsets: IndexSet){
