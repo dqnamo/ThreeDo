@@ -17,29 +17,45 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView{
-            List{
-                ForEach(tasks) { task in
-                    HStack {
-                        Text("\(task.name)")
-                    }
-                    .padding()
+            VStack{
+                Spacer(minLength: 40)
+                VStack{
+                    Text("🎯 Today's Goals")
+                        .fontWeight(.bold)
+                        .font(.system(size: 30))
                 }
-                .onDelete(perform: deleteTodo)
+                VStack{
+                    List{
+                        ForEach(tasks) { task in
+                            HStack {
+                                Text("\(task.name)")
+                            }
+                            .padding()
+                        }
+                        .onDelete(perform: deleteTodo)
+                        if tasks.count < 3{
+                            HStack {
+                                Button(action: {
+                                    self.showingAddTodoView.toggle()
+                                }, label: {
+                                    Text("Add Goal")
+                                        .foregroundColor(.white)
+                                })
+                            }
+                            .padding()
+                            .listRowBackground(Color.blue)
+                        }
+                    }
+                    .listStyle(InsetGroupedListStyle())
+                }
+                
             }
-            .listStyle(InsetGroupedListStyle())
-//            List(tasks) { task in
-//                Text("\(task.name)")
-//            }
-                .navigationBarTitle("Today's Tasks")
-                .navigationBarItems(trailing:
-                    Button(action: {
-                        self.showingAddTodoView.toggle()
-                    }, label: {
-                        Image(systemName: "plus")
-                    }))
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
             .sheet(isPresented: $showingAddTodoView, content: {
                 AddTodoView()
             })
+
         }
     }
     
