@@ -51,7 +51,7 @@ struct AddTodoView: View {
                     .listRowBackground(Color.blue)
                 }
             }
-                .navigationBarTitle("Add Todo")
+                .navigationBarTitle("🚀 Add Goal")
                 .navigationBarItems(trailing:
                     Button(action: {
                         self.presentationMode.wrappedValue.dismiss()
