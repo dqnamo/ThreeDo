@@ -19,5 +19,6 @@ extension Task: Identifiable {
     @NSManaged public var name: String
     @NSManaged public var id: UUID?
     @NSManaged public var completed: Bool
+    @NSManaged public var date: Date
 
 }

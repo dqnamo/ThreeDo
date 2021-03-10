@@ -10,6 +10,7 @@ import CoreData
 
 struct AddTodoView: View {
     @State private var name: String = ""
+    @State private var date: Date = Date()
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.managedObjectContext) private var viewContext
     
@@ -21,12 +22,13 @@ struct AddTodoView: View {
         NavigationView{
             VStack{
                 Form{
-                    TextField("New goal", text: $name)
+                    TextField("Describe your goal", text: $name)
                         .padding()
                     Button(action: {
                         let task = Task(context: viewContext)
                         if self.name != "" {
                             task.name = self.name
+                            task.date = self.date
                             task.id = UUID()
                             do {
                                 try viewContext.save()
@@ -43,12 +45,13 @@ struct AddTodoView: View {
                         }
                         self.presentationMode.wrappedValue.dismiss()
                     }, label: {
-                        Text("Add Goal")
+                        Text("Add goal")
+                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             .background(Color("ColorBase"))
                             .foregroundColor(.white)
                     })
                     .padding()
-                    .listRowBackground(Color.blue)
+                    .listRowBackground(Color(.sRGB, red: 0.2, green: 0.9, blue: 0.88))
                 }
             }
                 .navigationBarTitle("🚀 Add Goal")
