@@ -10,7 +10,7 @@ import CoreData
 
 struct AddTodoView: View {
     @State private var name: String = ""
-    @State private var date: Date = Date()
+    @State var date: Date
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.managedObjectContext) private var viewContext
     

@@ -9,13 +9,17 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+    @State private var name: String = ""
+    @State private var errorShowing: Bool = false
+    @State private var errorTitle: String = ""
+    @State private var errorMessage: String = ""
     @State private var showingAddTodoView: Bool = false
     @State private var date: Date = Date()
     @Environment(\.managedObjectContext) private var viewContext
+    @State private var refreshingID = UUID()
 //    @FetchRequest(entity: Task.entity(), sortDescriptors: [])
 
 //    var tasks: FetchedResults<Task>
-
     var body: some View {
         NavigationView{
             VStack{
@@ -36,25 +40,12 @@ struct ContentView: View {
                 }
                 VStack{
                     List{
+//                        GoalsList(date: date)
                         ForEach(getTasks()) { task in
-                            Button(action: {
-                                if task.completed{
-                                    uncompleteTodo(t: task)
-                                }else{
-                                    completeTodo(t: task)
-                                }
-                            }){
-                                HStack {
-                                    Text("\(task.name)")
-                                        .strikethrough(task.completed)
-                                    if task.completed{
-                                        Image(systemName: "checkmark.square.fill")
-                                    }
-                                }
-                                .padding()
-                            }.buttonStyle(PlainButtonStyle())
+                            GoalRow(task: task)
                         }
                         .onDelete(perform: deleteTodo)
+                        .id(refreshingID)
                         if getTasks().count < 3{
                             HStack {
                                 Button(action: {
@@ -76,7 +67,7 @@ struct ContentView: View {
             .navigationBarTitle("")
             .navigationBarHidden(true)
             .sheet(isPresented: $showingAddTodoView, content: {
-                AddTodoView()
+                AddTodoView(date: date)
             })
 
         }
@@ -96,6 +87,7 @@ struct ContentView: View {
             
             do{
                 try viewContext.save()
+                self.refreshingID = UUID()
             } catch {
                 print(error)
             }

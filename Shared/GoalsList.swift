@@ -8,13 +8,19 @@ import Foundation
 import SwiftUI
 import CoreData
 
-struct SwiftUIView: View {
+struct GoalsList: View {
     
     @Environment(\.managedObjectContext) private var viewContext
-    @State var date: Date
+    @FetchRequest(entity: Task.entity(), sortDescriptors: [])
+    var tasks: FetchedResults<Task>
+    
+    init(date: Date) {
+        _tasks = FetchRequest(sortDescriptors: [], predicate: fetchPredicate(filter: date))
+    }
+    
     
     var body: some View {
-        ForEach(getTasks()) { task in
+        ForEach(tasks) { task in
             GoalRow(task: task)
         }
         .onDelete(perform: deleteTodo)
@@ -22,7 +28,7 @@ struct SwiftUIView: View {
     
     private func deleteTodo(at offsets: IndexSet){
         for index in offsets {
-            let task = getTasks()[index]
+            let task = tasks[index]
             viewContext.delete(task)
             
             do{
@@ -33,21 +39,19 @@ struct SwiftUIView: View {
         }
     }
     
-    private func getTasks() -> [Task]{
-        let tasksFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Task")
-        tasksFetch.predicate = fetchPredicate(filter: date)
-         
-        do {
-            let fetchedTasks = try viewContext.fetch(tasksFetch) as! [Task]
-            return fetchedTasks
-        } catch {
-            fatalError("Failed to fetch employees: \(error)")
-        }
-    }
-}
-
-struct SwiftUIView_Previews: PreviewProvider {
-    static var previews: some View {
-        SwiftUIView()
+    private func fetchPredicate(filter: Date) -> NSPredicate{
+        // get the current calendar
+        let calendar = NSCalendar.current
+        // get the start of the day of the selected date
+        let startDate = calendar.startOfDay(for: filter)
+        // get the start of the day after the selected date
+        var components = DateComponents()
+        components.day = 1
+        components.second = -1
+        let endDate = calendar.date(byAdding: components, to: startDate)!
+        // create a predicate to filter between start date and end date
+        let predicate = NSPredicate(format: "date >= %@ AND date < %@", startDate as NSDate, endDate as NSDate)
+        
+        return predicate
     }
 }

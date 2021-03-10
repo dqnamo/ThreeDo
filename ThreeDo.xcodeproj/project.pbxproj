@@ -21,6 +21,10 @@
 		E804029025F56172005DBDCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E804026025F56172005DBDCC /* Assets.xcassets */; };
 		E82F292425F60E8D0078B67C /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F292225F60E8D0078B67C /* Task+CoreDataClass.swift */; };
 		E82F292525F60E8D0078B67C /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F292325F60E8D0078B67C /* Task+CoreDataProperties.swift */; };
+		E8606C0E25F8C287002722F2 /* GoalRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8606C0D25F8C287002722F2 /* GoalRow.swift */; };
+		E8606C0F25F8C287002722F2 /* GoalRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8606C0D25F8C287002722F2 /* GoalRow.swift */; };
+		E87B4C4625F8D7450029D91D /* GoalsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87B4C4525F8D7450029D91D /* GoalsList.swift */; };
+		E87B4C4725F8D7450029D91D /* GoalsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87B4C4525F8D7450029D91D /* GoalsList.swift */; };
 		E8DB971B25F6025D00CE41F0 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DB971A25F6025D00CE41F0 /* AddTodoView.swift */; };
 		E8DB971C25F6025D00CE41F0 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DB971A25F6025D00CE41F0 /* AddTodoView.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +65,8 @@
 		E804028625F56172005DBDCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E82F292225F60E8D0078B67C /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
 		E82F292325F60E8D0078B67C /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E8606C0D25F8C287002722F2 /* GoalRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalRow.swift; sourceTree = "<group>"; };
+		E87B4C4525F8D7450029D91D /* GoalsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsList.swift; sourceTree = "<group>"; };
 		E8DB971A25F6025D00CE41F0 /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +121,8 @@
 			children = (
 				E804025D25F56170005DBDCC /* ThreeDoApp.swift */,
 				E804025E25F56170005DBDCC /* ContentView.swift */,
+				E87B4C4525F8D7450029D91D /* GoalsList.swift */,
+				E8606C0D25F8C287002722F2 /* GoalRow.swift */,
 				E804025F25F56170005DBDCC /* Persistence.swift */,
 				E804026025F56172005DBDCC /* Assets.xcassets */,
 				E804025B25F56170005DBDCC /* ThreeDo.xcdatamodeld */,
@@ -328,7 +336,9 @@
 			files = (
 				E804028725F56172005DBDCC /* ThreeDo.xcdatamodeld in Sources */,
 				E804028D25F56172005DBDCC /* Persistence.swift in Sources */,
+				E87B4C4625F8D7450029D91D /* GoalsList.swift in Sources */,
 				E804028925F56172005DBDCC /* ThreeDoApp.swift in Sources */,
+				E8606C0E25F8C287002722F2 /* GoalRow.swift in Sources */,
 				E804028B25F56172005DBDCC /* ContentView.swift in Sources */,
 				E82F292525F60E8D0078B67C /* Task+CoreDataProperties.swift in Sources */,
 				E82F292425F60E8D0078B67C /* Task+CoreDataClass.swift in Sources */,
@@ -341,6 +351,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E804028825F56172005DBDCC /* ThreeDo.xcdatamodeld in Sources */,
+				E87B4C4725F8D7450029D91D /* GoalsList.swift in Sources */,
+				E8606C0F25F8C287002722F2 /* GoalRow.swift in Sources */,
 				E804028E25F56172005DBDCC /* Persistence.swift in Sources */,
 				E804028A25F56172005DBDCC /* ThreeDoApp.swift in Sources */,
 				E804028C25F56172005DBDCC /* ContentView.swift in Sources */,
