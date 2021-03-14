@@ -19,26 +19,18 @@
 		E804028E25F56172005DBDCC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E804025F25F56170005DBDCC /* Persistence.swift */; };
 		E804028F25F56172005DBDCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E804026025F56172005DBDCC /* Assets.xcassets */; };
 		E804029025F56172005DBDCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E804026025F56172005DBDCC /* Assets.xcassets */; };
-		E812017625FA0E0700F3F889 /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E812017525FA0E0700F3F889 /* DateView.swift */; };
-		E812017725FA0E0700F3F889 /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E812017525FA0E0700F3F889 /* DateView.swift */; };
 		E82F292425F60E8D0078B67C /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F292225F60E8D0078B67C /* Task+CoreDataClass.swift */; };
 		E82F292525F60E8D0078B67C /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F292325F60E8D0078B67C /* Task+CoreDataProperties.swift */; };
 		E8606C0E25F8C287002722F2 /* GoalRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8606C0D25F8C287002722F2 /* GoalRow.swift */; };
 		E8606C0F25F8C287002722F2 /* GoalRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8606C0D25F8C287002722F2 /* GoalRow.swift */; };
-		E867F81C25FBF1040063330B /* HelpMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E867F81B25FBF1040063330B /* HelpMenu.swift */; };
-		E867F81D25FBF1040063330B /* HelpMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E867F81B25FBF1040063330B /* HelpMenu.swift */; };
 		E867F82E25FCCC860063330B /* StreakCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E867F82D25FCCC860063330B /* StreakCounter.swift */; };
 		E867F82F25FCCC860063330B /* StreakCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E867F82D25FCCC860063330B /* StreakCounter.swift */; };
-		E87B4C4625F8D7450029D91D /* GoalsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87B4C4525F8D7450029D91D /* GoalsList.swift */; };
-		E87B4C4725F8D7450029D91D /* GoalsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87B4C4525F8D7450029D91D /* GoalsList.swift */; };
 		E8DB971B25F6025D00CE41F0 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DB971A25F6025D00CE41F0 /* AddTodoView.swift */; };
 		E8DB971C25F6025D00CE41F0 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DB971A25F6025D00CE41F0 /* AddTodoView.swift */; };
 		E8E07BF325FDABD800DFDD95 /* PastTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E07BF225FDABD800DFDD95 /* PastTasks.swift */; };
 		E8E07BF425FDABD800DFDD95 /* PastTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E07BF225FDABD800DFDD95 /* PastTasks.swift */; };
 		E8E07C0525FDB4E400DFDD95 /* TomorrowTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E07C0425FDB4E400DFDD95 /* TomorrowTasks.swift */; };
 		E8E07C0625FDB4E400DFDD95 /* TomorrowTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E07C0425FDB4E400DFDD95 /* TomorrowTasks.swift */; };
-		E8E07C0C25FDB79A00DFDD95 /* Reminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E07C0B25FDB79A00DFDD95 /* Reminders.swift */; };
-		E8E07C0D25FDB79A00DFDD95 /* Reminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E07C0B25FDB79A00DFDD95 /* Reminders.swift */; };
 		E8E07C1325FE649600DFDD95 /* Doctrine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E07C1225FE649600DFDD95 /* Doctrine.swift */; };
 		E8E07C1425FE649600DFDD95 /* Doctrine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E07C1225FE649600DFDD95 /* Doctrine.swift */; };
 /* End PBXBuildFile section */
@@ -77,17 +69,13 @@
 		E804028025F56172005DBDCC /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E804028425F56172005DBDCC /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		E804028625F56172005DBDCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E812017525FA0E0700F3F889 /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
 		E82F292225F60E8D0078B67C /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
 		E82F292325F60E8D0078B67C /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E8606C0D25F8C287002722F2 /* GoalRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalRow.swift; sourceTree = "<group>"; };
-		E867F81B25FBF1040063330B /* HelpMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpMenu.swift; sourceTree = "<group>"; };
 		E867F82D25FCCC860063330B /* StreakCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakCounter.swift; sourceTree = "<group>"; };
-		E87B4C4525F8D7450029D91D /* GoalsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsList.swift; sourceTree = "<group>"; };
 		E8DB971A25F6025D00CE41F0 /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
 		E8E07BF225FDABD800DFDD95 /* PastTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastTasks.swift; sourceTree = "<group>"; };
 		E8E07C0425FDB4E400DFDD95 /* TomorrowTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomorrowTasks.swift; sourceTree = "<group>"; };
-		E8E07C0B25FDB79A00DFDD95 /* Reminders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminders.swift; sourceTree = "<group>"; };
 		E8E07C1225FE649600DFDD95 /* Doctrine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctrine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,18 +131,14 @@
 				E804025D25F56170005DBDCC /* ThreeDoApp.swift */,
 				E804025E25F56170005DBDCC /* ContentView.swift */,
 				E8E07C1225FE649600DFDD95 /* Doctrine.swift */,
-				E8E07C0B25FDB79A00DFDD95 /* Reminders.swift */,
 				E8E07C0425FDB4E400DFDD95 /* TomorrowTasks.swift */,
 				E8E07BF225FDABD800DFDD95 /* PastTasks.swift */,
-				E812017525FA0E0700F3F889 /* DateView.swift */,
-				E87B4C4525F8D7450029D91D /* GoalsList.swift */,
 				E8606C0D25F8C287002722F2 /* GoalRow.swift */,
 				E804025F25F56170005DBDCC /* Persistence.swift */,
 				E804026025F56172005DBDCC /* Assets.xcassets */,
 				E804025B25F56170005DBDCC /* ThreeDo.xcdatamodeld */,
 				E8DB971A25F6025D00CE41F0 /* AddTodoView.swift */,
 				E867F82D25FCCC860063330B /* StreakCounter.swift */,
-				E867F81B25FBF1040063330B /* HelpMenu.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -362,14 +346,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8E07C0C25FDB79A00DFDD95 /* Reminders.swift in Sources */,
 				E8E07C1325FE649600DFDD95 /* Doctrine.swift in Sources */,
 				E867F82E25FCCC860063330B /* StreakCounter.swift in Sources */,
-				E812017625FA0E0700F3F889 /* DateView.swift in Sources */,
 				E804028725F56172005DBDCC /* ThreeDo.xcdatamodeld in Sources */,
 				E804028D25F56172005DBDCC /* Persistence.swift in Sources */,
-				E87B4C4625F8D7450029D91D /* GoalsList.swift in Sources */,
-				E867F81C25FBF1040063330B /* HelpMenu.swift in Sources */,
 				E8E07BF325FDABD800DFDD95 /* PastTasks.swift in Sources */,
 				E804028925F56172005DBDCC /* ThreeDoApp.swift in Sources */,
 				E8606C0E25F8C287002722F2 /* GoalRow.swift in Sources */,
@@ -386,16 +366,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E804028825F56172005DBDCC /* ThreeDo.xcdatamodeld in Sources */,
-				E8E07C0D25FDB79A00DFDD95 /* Reminders.swift in Sources */,
 				E8E07BF425FDABD800DFDD95 /* PastTasks.swift in Sources */,
-				E87B4C4725F8D7450029D91D /* GoalsList.swift in Sources */,
 				E867F82F25FCCC860063330B /* StreakCounter.swift in Sources */,
-				E812017725FA0E0700F3F889 /* DateView.swift in Sources */,
 				E8E07C0625FDB4E400DFDD95 /* TomorrowTasks.swift in Sources */,
 				E8606C0F25F8C287002722F2 /* GoalRow.swift in Sources */,
 				E804028E25F56172005DBDCC /* Persistence.swift in Sources */,
 				E804028A25F56172005DBDCC /* ThreeDoApp.swift in Sources */,
-				E867F81D25FBF1040063330B /* HelpMenu.swift in Sources */,
 				E8E07C1425FE649600DFDD95 /* Doctrine.swift in Sources */,
 				E804028C25F56172005DBDCC /* ContentView.swift in Sources */,
 				E8DB971C25F6025D00CE41F0 /* AddTodoView.swift in Sources */,

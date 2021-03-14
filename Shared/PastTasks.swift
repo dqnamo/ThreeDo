@@ -8,9 +8,8 @@
 import SwiftUI
 import CoreData
 
-struct PastTasks: View {
+struct PastGoals: View {
     
-    @Environment(\.presentationMode) var presentationMode
     @Environment(\.managedObjectContext) private var viewContext
     
     @FetchRequest(
@@ -31,7 +30,7 @@ struct PastTasks: View {
                         
                         if allCount() == 0{
                             HStack{
-                                Text("Oh, Looks like you dont have any past goals yet.").foregroundColor(.gray)
+                                Text("Oh, Looks like you haven't completed any goals yet.").foregroundColor(.gray)
                             }.padding(40)
                         }
                     }
@@ -39,7 +38,7 @@ struct PastTasks: View {
                 .listStyle(InsetGroupedListStyle())
             }
             .navigationBarTitle("Past Goals")
-            .navigationBarItems(trailing: Image(systemName: "\(completedCount()).circle.fill").foregroundColor(.green).font(.system(size: 20)))
+            .navigationBarItems(trailing: Text("\(completedCount()) ✅"))
         }
     
     private func getTasks(day: Date) -> [Task]{
@@ -100,11 +99,4 @@ struct PastTasks: View {
         return 0
     }
 
-}
-
-
-struct PastTasks_Previews: PreviewProvider {
-    static var previews: some View {
-        PastTasks()
-    }
 }

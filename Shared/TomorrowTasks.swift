@@ -42,31 +42,21 @@ struct TomorrowTasks: View {
                     .padding()
                     if getTasks(day: date).count < 3{
                         HStack {
-                            TextField("What is your goal?", text: $name)
-                            Spacer()
-                            Button(action: {
-                                let task = Task(context: viewContext)
-                                if self.name != "" {
-                                    task.name = self.name
-                                    task.date = self.date
-                                    task.id = UUID()
-                                    self.name = ""
-                                    do {
-                                        try viewContext.save()
-                                    } catch {
-                                        print("error")
+                            TextField("What is your goal?", text: $name, onCommit: {
+                                    let task = Task(context: viewContext)
+                                    if self.name != "" {
+                                        task.name = self.name
+                                        task.date = self.date
+                                        task.id = UUID()
+                                        self.name = ""
+                                        do {
+                                            try viewContext.save()
+                                        } catch {
+                                            print("error")
+                                        }
                                     }
-                                } else{
-                                    self.errorShowing = true
-                                    self.errorTitle = "Oops."
-                                    self.errorMessage = "Looks like you forgot describe your goal!"
-                                    viewContext.delete(task)
-                                    return
-                                }
-                            }, label: {
-                                Image(systemName: "plus.circle.fill")
-                            })
-                            
+                                  })
+                            Spacer()                            
                         }
                         .padding()
                     }

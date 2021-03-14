@@ -8,43 +8,20 @@
 import SwiftUI
 import CoreData
 
-enum ActiveSheet: Identifiable {
-    case pastGoals, tomorrowGoals
-    var id: Int {
-        hashValue
-    }
-}
-
 struct ContentView: View {
-    @State var activeSheet: ActiveSheet?
-    @State var isEditMode: EditMode = .inactive
     @State private var name: String = ""
-    @State private var revealDetails = false
-    @State private var revealDetails1 = false
-    @State private var errorShowing: Bool = false
     @State private var showSheet: Bool = false
-    @State private var togglePastTasks: Bool = false
-    @State private var toggleTommorow: Bool = false
-    @State private var errorTitle: String = ""
-    @State private var errorMessage: String = ""
-    @State private var showingAddTodoView: Bool = false
-    @State private var todotoday: Bool = false
-    @State private var showingAddTodoView2: Bool = false
-    @State private var addOnDate: Date = Date()
     @State private var date: Date = Date()
-    @State private var viewDay: String = "Today"
+    
     @Environment(\.managedObjectContext) private var viewContext
     @State private var refreshingID = UUID()
     
-    @State private var selection = 2
     @FetchRequest(
         entity: Task.entity(),
         sortDescriptors: [NSSortDescriptor(keyPath: \Task.date, ascending: true)],
         predicate: NSPredicate(format: "date >= %@", Calendar.current.date(byAdding: .day, value: -1, to: Date())! as NSDate)
     ) var tasks: FetchedResults<Task>
-//    @FetchRequest(entity: Task.entity(), sortDescriptors: [])
-    
-//    var tasks: FetchedResults<Task>
+
     var body: some View {
         NavigationView{
             VStack{
@@ -56,44 +33,32 @@ struct ContentView: View {
                                     GoalRow(task: task, locked: false)
                                         .foregroundColor(.primary)
                                 }
-                                
                             }
                             .onDelete(perform: deleteTodo)
                             .padding()
                             if getTasks(day: date).count < 3{
                                 HStack {
-                                    TextField("What is your goal?", text: $name)
-                                    Spacer()
-                                    Button(action: {
-                                        let task = Task(context: viewContext)
-                                        if self.name != "" {
-                                            task.name = self.name
-                                            task.date = Date()
-                                            task.id = UUID()
-                                            self.name = ""
-                                            do {
-                                                try viewContext.save()
-                                            } catch {
-                                                print("error")
+                                    TextField("What is your goal?", text: $name, onCommit: {
+                                            let task = Task(context: viewContext)
+                                            if self.name != "" {
+                                                task.name = self.name
+                                                task.date = Date()
+                                                task.id = UUID()
+                                                self.name = ""
+                                                do {
+                                                    try viewContext.save()
+                                                } catch {
+                                                    print("error")
+                                                }
                                             }
-                                        } else{
-                                            self.errorShowing = true
-                                            self.errorTitle = "Oops."
-                                            self.errorMessage = "Looks like you forgot describe your goal!"
-                                            viewContext.delete(task)
-                                            return
-                                        }
-                                    }, label: {
-                                        Image(systemName: "plus.circle.fill")
-                                            .font(.system(size: 18))
-                                    })
-                                    
+                                          })
+                                    Spacer()
                                 }
                                 .padding()
                             }
                         }
                         Section(header: Text("Tools")) {
-                            NavigationLink(destination: PastTasks()) {
+                            NavigationLink(destination: PastGoals()) {
                                 HStack{
                                     Text("Past Goals")
                                         .foregroundColor(.gray)
@@ -111,28 +76,16 @@ struct ContentView: View {
                 }
                 
             }
-            .navigationBarTitle("\(viewDay)'s Goals")
+            .navigationBarTitle("Today's Goals")
             .navigationBarItems(leading: Button(action: {showSheet.toggle()}, label: {
-                Image(systemName: "questionmark.circle.fill")
+                Image(systemName: "questionmark.circle.fill").foregroundColor(.gray)
             }), trailing: StreakCounter())
         }
-//        .sheet(item: $activeSheet){ item in
-//            switch item {
-//            case .pastGoals:
-//                PastTasks()
-//            case .tomorrowGoals:
-//                TomorrowTasks(date: nextDate(day: Date()))
-//            }
-//        }
         .sheet(isPresented: $showSheet, content: {
             Doctrine()
         })
         
     }
-    
-//    private func pageHeading() -> Text{
-//        
-//    }
     
     private func todayDate() -> String{
         let today = Date()
