@@ -20,9 +20,9 @@ struct AddTodoView: View {
 
     var body: some View {
         NavigationView{
-            VStack{
+            VStack(alignment: .leading){
                 Form{
-                    TextField("Describe your goal", text: $name)
+                    TextField("What is your goal?", text: $name)
                         .padding()
                     Button(action: {
                         let task = Task(context: viewContext)
@@ -43,29 +43,35 @@ struct AddTodoView: View {
                             viewContext.delete(task)
                             return
                         }
-                        self.presentationMode.wrappedValue.dismiss()
                     }, label: {
-                        Text("Add goal")
+                        Text("Create Goal")
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             .background(Color("ColorBase"))
                             .foregroundColor(.white)
                     })
                     .padding()
-                    .listRowBackground(Color(.sRGB, red: 0.2, green: 0.9, blue: 0.88))
+                    .listRowBackground(Color.blue)
                 }
             }
-                .navigationBarTitle("🚀 Add Goal")
-                .navigationBarItems(trailing:
-                    Button(action: {
-                        self.presentationMode.wrappedValue.dismiss()
-                    }, label: {
-                        Image(systemName: "xmark")
-                    }))
+            .navigationBarTitle("Add Goal")
+            .navigationBarItems(trailing:
+                Button(action: {
+                    self.presentationMode.wrappedValue.dismiss()
+                }, label: {
+                    Image(systemName: "xmark")
+                }))
         }
         .alert(isPresented: $errorShowing, content: {
             Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("OK")))
         })
     }
+    
+    private func displayDate(day: Date) -> String{
+        let formatter3 = DateFormatter()
+        formatter3.dateFormat = "E, d MMM y"
+        return formatter3.string(from: day)
+    }
+
 }
 
 private let itemFormatter: DateFormatter = {

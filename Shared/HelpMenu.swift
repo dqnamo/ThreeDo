@@ -9,12 +9,11 @@ import SwiftUI
 
 struct HelpMenu: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct HelpMenu_Previews: PreviewProvider {
-    static var previews: some View {
-        HelpMenu()
+        Menu {
+            Link("📖 The ThreeDo Doctrine", destination: URL(string: "https://www.hackingwithswift.com/quick-start/swiftui")!)
+            Link("💎 About Us", destination: URL(string: "https://www.hackingwithswift.com/quick-start/swiftui")!)
+        } label: {
+            Image(systemName: "questionmark.circle.fill")
+        }
     }
 }
