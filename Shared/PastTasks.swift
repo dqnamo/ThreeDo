@@ -14,8 +14,8 @@ struct PastGoals: View {
     
     @FetchRequest(
         entity: Task.entity(),
-        sortDescriptors: [],
-        predicate: NSPredicate(format: "date <= %@", Calendar.current.date(byAdding: .day, value: -1, to: Date())! as NSDate)
+        sortDescriptors: [NSSortDescriptor(keyPath: \Task.date, ascending: false)],
+        predicate: NSPredicate(format: "date < %@", Date() as NSDate)
     ) var tasks: FetchedResults<Task>
     
     var body: some View {
@@ -23,9 +23,11 @@ struct PastGoals: View {
                 List{
                     Section(header: Text("View & Complete")) {
                         ForEach(tasks) { task in
-                            GoalRow(task: task, locked: false, past: true )
-                                .foregroundColor(.primary)
-                                .padding()
+                            if displayDate(day: Date()) != displayDate(day: task.date){
+                                GoalRow(task: task, locked: false, past: true )
+                                    .foregroundColor(.primary)
+                                    .padding()
+                            }
                         }
                         
                         if allCount() == 0{
@@ -40,6 +42,12 @@ struct PastGoals: View {
             .navigationBarTitle("Past Goals")
             .navigationBarItems(trailing: Text("\(completedCount()) ✅"))
         }
+    
+    private func displayDate(day: Date) -> String{
+        let formatter3 = DateFormatter()
+        formatter3.dateFormat = "E, d MMM y"
+        return formatter3.string(from: day)
+    }
     
     private func getTasks(day: Date) -> [Task]{
         let tasksFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Task")
@@ -77,7 +85,7 @@ struct PastGoals: View {
     
     private func completedCount() -> Int{
         let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Task")
-        fetch.predicate = NSPredicate(format: "date <= %@ AND completed == %@", Calendar.current.date(byAdding: .day, value: -1, to: Date())! as NSDate, NSNumber(value: true))
+        fetch.predicate = NSPredicate(format: "date < %@ AND completed == %@", Date() as NSDate, NSNumber(value: true))
         do{
             return try viewContext.count(for: fetch)
         }catch{
@@ -89,7 +97,7 @@ struct PastGoals: View {
     
     private func allCount() -> Int{
         let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Task")
-        fetch.predicate = NSPredicate(format: "date <= %@", Calendar.current.date(byAdding: .day, value: -1, to: Date())! as NSDate)
+        fetch.predicate = NSPredicate(format: "date < %@", Date() as NSDate)
         do{
             return try viewContext.count(for: fetch)
         }catch{

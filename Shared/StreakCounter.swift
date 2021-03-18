@@ -13,18 +13,18 @@ struct StreakCounter: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State private var streakCount: Int = 0
     
+    @FetchRequest(
+        entity: Streak.entity(),
+        sortDescriptors: [NSSortDescriptor(keyPath: \Streak.date, ascending: true)]
+    ) var streaks: FetchedResults<Streak>
+    
     var body: some View {
         HStack(spacing: 0){
-            if findCount(day: previousDate(day: today)) == 0{
+            if streaks.first!.counter == 0{
                 Text("0 ❄️")
             }else{
-                Text("\(findCount(day: previousDate(day: today))) 🔥")
+                Text("\(streaks.first!.counter) 🔥")
             }
-//            Text("🔥")
-//            Image(systemName: "\(findCount(day: today)).circle.fill")
-//                .font(.system(size: 20))
-//                .foregroundColor(.orange)
-//            Text("\(findCount(day: today)) 🔥")
         }
     }
     

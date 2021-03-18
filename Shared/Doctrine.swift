@@ -25,7 +25,7 @@ struct Doctrine: View {
                     RoundedRectangle(cornerRadius: 10, style: .continuous)
                                     .fill(Color.black)
                                     .frame(height: 50)
-                    Text("Pick 3 Core Goals and COMMIT 🚀").bold()
+                    Text("Pick 3 Core Goals and COMMIT 🚀").bold().foregroundColor(.white)
                 }.padding(.bottom, 20)
                 
                 Text("You might say but I only get three things done in a day?! But three core goals done a day is 90 core goals a month and 1092 core goals a year! So declutter your day and be more productive in the process!").foregroundColor(.gray)

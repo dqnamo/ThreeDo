@@ -19,6 +19,8 @@
 		E804028E25F56172005DBDCC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E804025F25F56170005DBDCC /* Persistence.swift */; };
 		E804028F25F56172005DBDCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E804026025F56172005DBDCC /* Assets.xcassets */; };
 		E804029025F56172005DBDCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E804026025F56172005DBDCC /* Assets.xcassets */; };
+		E80D6444260215EE003A3C66 /* Streak+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80D6443260215EE003A3C66 /* Streak+CoreDataClass.swift */; };
+		E80D644A26021613003A3C66 /* Streak+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80D644926021613003A3C66 /* Streak+CoreDataProperties.swift */; };
 		E82F292425F60E8D0078B67C /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F292225F60E8D0078B67C /* Task+CoreDataClass.swift */; };
 		E82F292525F60E8D0078B67C /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F292325F60E8D0078B67C /* Task+CoreDataProperties.swift */; };
 		E8606C0E25F8C287002722F2 /* GoalRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8606C0D25F8C287002722F2 /* GoalRow.swift */; };
@@ -69,6 +71,8 @@
 		E804028025F56172005DBDCC /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E804028425F56172005DBDCC /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		E804028625F56172005DBDCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E80D6443260215EE003A3C66 /* Streak+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Streak+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E80D644926021613003A3C66 /* Streak+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Streak+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E82F292225F60E8D0078B67C /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
 		E82F292325F60E8D0078B67C /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E8606C0D25F8C287002722F2 /* GoalRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalRow.swift; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 			children = (
 				E82F292225F60E8D0078B67C /* Task+CoreDataClass.swift */,
 				E82F292325F60E8D0078B67C /* Task+CoreDataProperties.swift */,
+				E80D6443260215EE003A3C66 /* Streak+CoreDataClass.swift */,
+				E80D644926021613003A3C66 /* Streak+CoreDataProperties.swift */,
 				E804025A25F56170005DBDCC /* Shared */,
 				E804026725F56172005DBDCC /* iOS */,
 				E804026E25F56172005DBDCC /* macOS */,
@@ -355,7 +361,9 @@
 				E8606C0E25F8C287002722F2 /* GoalRow.swift in Sources */,
 				E804028B25F56172005DBDCC /* ContentView.swift in Sources */,
 				E82F292525F60E8D0078B67C /* Task+CoreDataProperties.swift in Sources */,
+				E80D6444260215EE003A3C66 /* Streak+CoreDataClass.swift in Sources */,
 				E82F292425F60E8D0078B67C /* Task+CoreDataClass.swift in Sources */,
+				E80D644A26021613003A3C66 /* Streak+CoreDataProperties.swift in Sources */,
 				E8DB971B25F6025D00CE41F0 /* AddTodoView.swift in Sources */,
 				E8E07C0525FDB4E400DFDD95 /* TomorrowTasks.swift in Sources */,
 			);
@@ -526,6 +534,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 252B4ZGSZY;
 				ENABLE_PREVIEWS = YES;
@@ -537,6 +546,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = JP.ThreeDo;
 				PRODUCT_NAME = ThreeDo;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -548,6 +558,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 252B4ZGSZY;
 				ENABLE_PREVIEWS = YES;
@@ -559,6 +570,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = JP.ThreeDo;
 				PRODUCT_NAME = ThreeDo;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
